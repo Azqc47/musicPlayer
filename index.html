@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="main__left">
+                <div class="left-title">
+                    <a href="" class="title--name">Library</a>
+                    <ul class="title--list">
+                        <li><a href="">Music</a></li>
+                        <li><a href="">Playlist</a></li>
+                        <li><a href="">Singer</a></li>
+                        <li><a href="">More</a></li>
+                    </ul>
+                </div>
+                <div class="left-info">
+
+                </div>
+            </div>
+            <div class="main__center">
+                <div class="center-plate">
+                    <div class="plate-btn">
+                        <div class="btn--volume">
+                            <i class="fa-solid fa-volume-high"></i>
+                            <i class="fa-solid fa-volume-xmark"></i>
+                        </div>
+                        <div class="btn--info">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                    </div>
+                    <div class="plate-name">
+                        <h4>Đang phát</h4>
+                        <h2>Nhac</h2>
+                    </div>
+                    <div class="plate-img">
+                        <div class="img--music">
+                            <img src="/assets/img/1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="plate-range">
+                        <div class="range--music">
+                            <input type="range" name="" id="progress" value="0" step="1" min="0" max="100">
+                        </div>
+                    </div>
+                    <audio id="audio" src=""></audio>
+                </div>
+                <div class="center-btn">
+                    <div class="btn-control">
+                        <div class="btn btn--repeat">
+                            <i class="fas fa-redo"></i>
+                        </div>
+                        <div class="btn btn--prev">
+                            <i class="fas fa-step-backward"></i>
+                        </div>
+                        <div class="btn btn--toggle-play">
+                            <i class="fas fa-pause icon-pause"></i>
+                            <i class="fas fa-play icon-play"></i>
+                        </div>
+                        <div class="btn btn--next">
+                            <i class="fas fa-step-forward"></i>
+                        </div>
+                        <div class="btn btn--random">
+                            <i class="fas fa-random"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__right">
+                <h3>PLAYLIST</h3>
+                <div class="right-playlist">
+                    <div class="right-more"></div>
+                </div>
+            </div>
+        </div>
+        <script src="/app.js"></script>
+</body>
+
+</html>

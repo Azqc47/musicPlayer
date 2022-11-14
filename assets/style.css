@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: SF Mono;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7b7e8a;
+}
+
+.main {
+  width: 920px;
+  height: 700px;
+  display: flex;
+  border-radius: 27px;
+  background: transparent;
+  box-shadow: 36px 36px 56px #4f5158, -36px -36px 56px #a7abbc;
+  gap: 10px;  
+}
+
+.main__right {
+  width: 250px;
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.main.playing .icon-pause {
+  display: inline-block;
+}
+.main.playing .icon-play {
+  display: none;
+}
+
+
+/* LEFT */
+.main__left {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left-title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+  height: 50%;
+}
+.title--list li {
+  height: 50px;
+  list-style: none;
+}
+.left-title .title--name {
+  margin-top: 30px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #333;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+.title--list li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.title--list li:hover a {
+  color: #4f5158;
+}
+
+.left-info {
+  flex-grow: 1;
+}
+/* CENTER */
+.main__center {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 0px;
+  background: linear-gradient(145deg, #7f818e, #6b6d78);
+  box-shadow: 19px 19px 38px #3d3e44, -19px -19px 38px #b1b4c6;
+}
+.center-plate {
+  height: 60%;
+}
+.center-btn {
+  flex-grow: 1;
+}
+.plate-btn {
+  height: 10%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.btn--volume,
+.btn--info {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #6c6c6c, #808080);
+  box-shadow: 7px 7px 15px #666666, -7px -7px 15px #8a8a8a;
+}
+.btn--volume .fa-volume-xmark {
+  display: none;
+}
+.plate-name {
+  height: 15%;
+  width: 100%;
+  text-align: center;
+}
+.plate-name h2 {
+  color: #2c2626;
+}
+.plate-img {
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plate-img .img--music {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #4a4c52, #585a61);
+  box-shadow: 20px 20px 40px #34363a, -20px -20px 40px #70727c;
+}
+.img--music img {
+  width: 100%;
+}
+.plate-range {
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+.range--music {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.range--music input {
+  width: 80%;
+  color: #34363a;
+}
+.btn-control {
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  align-items: center;
+  width: 100%;
+}
+.btn-control .btn.active{
+  color: #ec1f55;
+}
+.btn--random:hover{
+  cursor: pointer;
+}
+
+
+
+.btn--toggle-play {
+  width: 50px;
+  height: 50px;
+  background: red;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #6c6c6c, #808080);
+  box-shadow: 7px 7px 15px #666666, -7px -7px 15px #8a8a8a;
+}
+.btn--toggle-play .icon-pause {
+  display: none;
+}
+/* PLAYLIST */
+.right-playlist {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+  height: 60%;
+  scroll-behavior: smooth;
+  overflow: scroll;
+}
+.main__right h3 {
+  width: 230px;
+  font-size: x-large;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+.playlist-song {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  padding: 5px 0;
+  justify-content: space-around;
+  border-radius: 5px;
+  align-items: center;
+  /* background: linear-gradient(145deg, #70717c, #858794);
+  box-shadow: 8px 8px 15px #585962, -8px -8px 15px #a0a3b2; */
+}
+.song--thumb img {
+  width: 100%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.song--body .title {
+  font-size: 14px;
+}
+.song--body .author {
+  font-size: 10px;
+}
+
+.song--thumb {
+  width: 18%;
+}
+.song--body {
+  width: 72%;
+}
+.song--option {
+  width: 10%;
+}
